@@ -1,0 +1,806 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="5lt|ZXbhTc]HXXhJyCU[">亂碼長度</variable>
+    <variable id="6Qq0m|OITjc#nFyVOIhU">清單-字母</variable>
+    <variable id="wx%iWd@ni9]]jBq#g1or">清單-次數</variable>
+    <variable id="{s4:n^wj0|FeRn4UGtso">o</variable>
+    <variable id="5Z,/d!hpuVBom%f2~xJ$">i-亂碼字母</variable>
+    <variable id="^2+r#,ld=L^^s8hNgH#{">i-最大次數</variable>
+    <variable id="q=::k7(K1`PMH*}WJM?+">清單-亂碼</variable>
+    <variable id="xBv1oIm=BABc!XD/k}/U">i-最大字母</variable>
+    <variable id="W8T^G+7-;B:MMWP3%sF2">i-幾次</variable>
+    <variable id=",2~Igt;7LFoooINh;Dzl">亂碼</variable>
+    <variable id="9nY1LY=A:}]r7+aWOE;^">n</variable>
+  </variables>
+  <block type="controls_repeat_ext" id="4*)F_-eB%Kpw93m4xrT;" disabled="true" x="38" y="-137">
+    <value name="TIMES">
+      <shadow type="math_number" id=".ID!9z7hjjxe8}/#}#h{">
+        <field name="NUM">10</field>
+      </shadow>
+      <block type="variables_get" id="V?)d8uFK(Tr:0}[h95j0">
+        <field name="VAR" id="5lt|ZXbhTc]HXXhJyCU[">亂碼長度</field>
+      </block>
+    </value>
+    <statement name="DO">
+      <block type="controls_flow_statements" id="ENO19n/`NdcZwwYGq7_.">
+        <field name="FLOW">BREAK</field>
+      </block>
+    </statement>
+    <next>
+      <block type="controls_if" id="Bz}EQ9.Ir=Z``#ovdxJL" disabled="true">
+        <mutation else="1"></mutation>
+        <value name="IF0">
+          <block type="logic_compare" id="sPM1ST1]LY[ii/aA[zKS">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="D(2_NGM(iCZAG/KD,l#H">
+                <field name="VAR" id="5Z,/d!hpuVBom%f2~xJ$">i-亂碼字母</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="lists_getIndex" id="Du`DQ)S5:p6X0-F)PSRR">
+                <mutation statement="false" at="false"></mutation>
+                <field name="MODE">GET</field>
+                <field name="WHERE">FIRST</field>
+                <value name="VALUE">
+                  <block type="variables_get" id="vC{F%j_9b2idnkLD]P]x">
+                    <field name="VAR" id="q=::k7(K1`PMH*}WJM?+">清單-亂碼</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </next>
+  </block>
+  <block type="procedures_callnoreturn" id="kMUd4KNzK=wFygV[$S|/" x="237" y="13">
+    <mutation name="初始"></mutation>
+    <next>
+      <block type="controls_whileUntil" id="GvZqGnr_1o3~nkaB$HM^">
+        <field name="MODE">UNTIL</field>
+        <value name="BOOL">
+          <block type="lists_isEmpty" id="zWR5nWD}vLE+u$lL6$gE">
+            <value name="VALUE">
+              <block type="variables_get" id="xG{^JcO0SZV?:}4q/(TZ">
+                <field name="VAR" id="q=::k7(K1`PMH*}WJM?+">清單-亂碼</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO">
+          <block type="variables_set" id="=o:%PiP(IxnG,el*C|(Q">
+            <field name="VAR" id="5Z,/d!hpuVBom%f2~xJ$">i-亂碼字母</field>
+            <value name="VALUE">
+              <block type="lists_getIndex" id="ajp,vSzWV{G$47-yj|(/">
+                <mutation statement="false" at="false"></mutation>
+                <field name="MODE">GET</field>
+                <field name="WHERE">FIRST</field>
+                <value name="VALUE">
+                  <block type="variables_get" id="f+Fvly]WcSm*Yk*4xLd}">
+                    <field name="VAR" id="q=::k7(K1`PMH*}WJM?+">清單-亂碼</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="controls_whileUntil" id="Q`@-xD@!.1x[8a?-kn,j">
+                <field name="MODE">UNTIL</field>
+                <value name="BOOL">
+                  <block type="logic_compare" id="(/1Cc,CC!/}!I9J!Pu69">
+                    <field name="OP">NEQ</field>
+                    <value name="A">
+                      <block type="variables_get" id=".sb#RqVkP=u16VF65_Qu">
+                        <field name="VAR" id="5Z,/d!hpuVBom%f2~xJ$">i-亂碼字母</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="lists_getIndex" id="G~S-G_kcCx|w~QPn)zo5">
+                        <mutation statement="false" at="false"></mutation>
+                        <field name="MODE">GET</field>
+                        <field name="WHERE">FIRST</field>
+                        <value name="VALUE">
+                          <block type="variables_get" id="r1JJ4G`gi^j.(`oKk|:Q">
+                            <field name="VAR" id="q=::k7(K1`PMH*}WJM?+">清單-亂碼</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO">
+                  <block type="math_change" id="gbz)+p|%j0[_?2K%n8[;">
+                    <field name="VAR" id="W8T^G+7-;B:MMWP3%sF2">i-幾次</field>
+                    <value name="DELTA">
+                      <shadow type="math_number" id="^o1YVy|LCP.@U0tK|.$q">
+                        <field name="NUM">1</field>
+                      </shadow>
+                      <block type="math_number" id="k_^,+SP,RTTE9@Ag?^?V">
+                        <field name="NUM">1</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="lists_getIndex" id=".|8v,,,i+%)rn|(QM9t@">
+                        <mutation statement="true" at="false"></mutation>
+                        <field name="MODE">REMOVE</field>
+                        <field name="WHERE">FIRST</field>
+                        <value name="VALUE">
+                          <block type="variables_get" id="6bY@*3%USmOlWQ*OG`_c">
+                            <field name="VAR" id="q=::k7(K1`PMH*}WJM?+">清單-亂碼</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <next>
+                  <block type="lists_setIndex" id="`)Esh^1i;(KTHqe`$#lQ">
+                    <mutation at="false"></mutation>
+                    <field name="MODE">INSERT</field>
+                    <field name="WHERE">FIRST</field>
+                    <value name="LIST">
+                      <block type="variables_get" id="D[aht5L6hb)s-O^`_y(/">
+                        <field name="VAR" id="6Qq0m|OITjc#nFyVOIhU">清單-字母</field>
+                      </block>
+                    </value>
+                    <value name="TO">
+                      <block type="variables_get" id="~l$lwPH)RVj8?qzZt;jC">
+                        <field name="VAR" id="5Z,/d!hpuVBom%f2~xJ$">i-亂碼字母</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="lists_setIndex" id=")8okjJcx]+Y$1ji/{,;H">
+                        <mutation at="false"></mutation>
+                        <field name="MODE">INSERT</field>
+                        <field name="WHERE">FIRST</field>
+                        <value name="LIST">
+                          <block type="variables_get" id="kR^*P@Uct2ZZmU3e|5J%">
+                            <field name="VAR" id="wx%iWd@ni9]]jBq#g1or">清單-次數</field>
+                          </block>
+                        </value>
+                        <value name="TO">
+                          <block type="variables_get" id="Z|X*}kP=8FMe)zm%bt|s">
+                            <field name="VAR" id="W8T^G+7-;B:MMWP3%sF2">i-幾次</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="variables_set" id="{`Tq9lv6;=hh}}%,J?)e">
+                            <field name="VAR" id="W8T^G+7-;B:MMWP3%sF2">i-幾次</field>
+                            <value name="VALUE">
+                              <block type="math_number" id="pNDS7|rj0?5%FlS2,8#.">
+                                <field name="NUM">0</field>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="variables_set" id="OGtEKH0b,:2t+@IGpv_)">
+            <field name="VAR" id="^2+r#,ld=L^^s8hNgH#{">i-最大次數</field>
+            <value name="VALUE">
+              <block type="lists_getIndex" id="01N(k-O0JYx#6ZZW^MX2">
+                <mutation statement="false" at="false"></mutation>
+                <field name="MODE">GET</field>
+                <field name="WHERE">FIRST</field>
+                <value name="VALUE">
+                  <block type="variables_get" id="d+YuE%.f4nS?_pCWLzES">
+                    <field name="VAR" id="wx%iWd@ni9]]jBq#g1or">清單-次數</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="variables_set" id="%HqdskN.l*aIYk1MoJs?">
+                <field name="VAR" id="xBv1oIm=BABc!XD/k}/U">i-最大字母</field>
+                <value name="VALUE">
+                  <block type="lists_getIndex" id="v0}:]nlMxbnN!c`z)5(+">
+                    <mutation statement="false" at="false"></mutation>
+                    <field name="MODE">GET</field>
+                    <field name="WHERE">FIRST</field>
+                    <value name="VALUE">
+                      <block type="variables_get" id="+`Vq(ZddVVn+k=_*-2_l">
+                        <field name="VAR" id="6Qq0m|OITjc#nFyVOIhU">清單-字母</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="controls_for" id="={k(DqRJ0`d@Cu:w:Pz6">
+                    <field name="VAR" id="{s4:n^wj0|FeRn4UGtso">o</field>
+                    <value name="FROM">
+                      <shadow type="math_number" id="pXxJp*4b%M@DnhC.Zpqp">
+                        <field name="NUM">1</field>
+                      </shadow>
+                    </value>
+                    <value name="TO">
+                      <shadow type="math_number" id="uTs_jvcT_m{_82aFaVmO">
+                        <field name="NUM">10</field>
+                      </shadow>
+                      <block type="lists_length" id="N){!-}N2zoKe0@QRdkwP">
+                        <value name="VALUE">
+                          <block type="variables_get" id="Of7O8Gneq%YR%6w;|6D:">
+                            <field name="VAR" id="6Qq0m|OITjc#nFyVOIhU">清單-字母</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="BY">
+                      <shadow type="math_number" id="x(b)!s`B(?-N,Y+I[f)Q">
+                        <field name="NUM">1</field>
+                      </shadow>
+                    </value>
+                    <statement name="DO">
+                      <block type="controls_if" id="L?-W6Wn.(IL}^%=*++$)">
+                        <value name="IF0">
+                          <block type="logic_compare" id="yBrwBHU4!gDj)|:J.[Y_">
+                            <field name="OP">GT</field>
+                            <value name="A">
+                              <block type="lists_getIndex" id="2$K%]6+$-e2kz9=d7c-y">
+                                <mutation statement="false" at="true"></mutation>
+                                <field name="MODE">GET</field>
+                                <field name="WHERE">FROM_START</field>
+                                <value name="VALUE">
+                                  <block type="variables_get" id="uqeGYPqE!4HE2eK|ii2i">
+                                    <field name="VAR" id="wx%iWd@ni9]]jBq#g1or">清單-次數</field>
+                                  </block>
+                                </value>
+                                <value name="AT">
+                                  <block type="math_arithmetic" id="xTsRDgca-AB!s;t*hE2K">
+                                    <field name="OP">ADD</field>
+                                    <value name="A">
+                                      <shadow type="math_number" id="@U!LPFNVMY]oQodPo?q,">
+                                        <field name="NUM">1</field>
+                                      </shadow>
+                                      <block type="variables_get" id="Vx.zF=0cW]Cfs{?T9{kC">
+                                        <field name="VAR" id="{s4:n^wj0|FeRn4UGtso">o</field>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <shadow type="math_number" id="36M[Q4CBL3bd{?8/6TFY">
+                                        <field name="NUM">1</field>
+                                      </shadow>
+                                    </value>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="variables_get" id="v134;,xd%QwrXB%ed9K/">
+                                <field name="VAR" id="^2+r#,ld=L^^s8hNgH#{">i-最大次數</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <statement name="DO0">
+                          <block type="variables_set" id="QC$b@Pf+o5d[d:B,~5^#">
+                            <field name="VAR" id="^2+r#,ld=L^^s8hNgH#{">i-最大次數</field>
+                            <value name="VALUE">
+                              <block type="lists_getIndex" id="/+OeHYv(]{`~IeU?ltE=">
+                                <mutation statement="false" at="true"></mutation>
+                                <field name="MODE">GET</field>
+                                <field name="WHERE">FROM_START</field>
+                                <value name="VALUE">
+                                  <block type="variables_get" id="V?/PUI)aDS#lrYvc^`ZE">
+                                    <field name="VAR" id="wx%iWd@ni9]]jBq#g1or">清單-次數</field>
+                                  </block>
+                                </value>
+                                <value name="AT">
+                                  <block type="math_arithmetic" id="s[i:t8r=6ayi!U}+/c@S">
+                                    <field name="OP">ADD</field>
+                                    <value name="A">
+                                      <shadow type="math_number">
+                                        <field name="NUM">1</field>
+                                      </shadow>
+                                      <block type="variables_get" id="wJv7*c3b*aoh]sI!!|8/">
+                                        <field name="VAR" id="{s4:n^wj0|FeRn4UGtso">o</field>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <shadow type="math_number" id="Be$UL[O*mO(*/go~cZIx">
+                                        <field name="NUM">1</field>
+                                      </shadow>
+                                    </value>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="variables_set" id="L=gDj.V|Ml1fwHFjML+;">
+                                <field name="VAR" id="xBv1oIm=BABc!XD/k}/U">i-最大字母</field>
+                                <value name="VALUE">
+                                  <block type="lists_getIndex" id="(NZx%h}J+h~~Nai9*,AR">
+                                    <mutation statement="false" at="true"></mutation>
+                                    <field name="MODE">GET</field>
+                                    <field name="WHERE">FROM_START</field>
+                                    <value name="VALUE">
+                                      <block type="variables_get" id="pKq7N1Mh5Zt+bkxJ/qmF">
+                                        <field name="VAR" id="6Qq0m|OITjc#nFyVOIhU">清單-字母</field>
+                                      </block>
+                                    </value>
+                                    <value name="AT">
+                                      <block type="math_arithmetic" id="DuKIjs+15_uTrs]$f9-o">
+                                        <field name="OP">ADD</field>
+                                        <value name="A">
+                                          <shadow type="math_number">
+                                            <field name="NUM">1</field>
+                                          </shadow>
+                                          <block type="variables_get" id="k*R883$]C2dw@e2],B1d">
+                                            <field name="VAR" id="{s4:n^wj0|FeRn4UGtso">o</field>
+                                          </block>
+                                        </value>
+                                        <value name="B">
+                                          <shadow type="math_number" id="E0xDl-!qFkK;plpy,FNK">
+                                            <field name="NUM">1</field>
+                                          </shadow>
+                                        </value>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                              </block>
+                            </next>
+                          </block>
+                        </statement>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="looks_say" id="kT:db]$bWgC@PF1-?/wr">
+                        <value name="TEXT">
+                          <block type="variables_get" id="cd0ytgezw}(~D2f#ndca">
+                            <field name="VAR" id="xBv1oIm=BABc!XD/k}/U">i-最大字母</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="looks_say" id="OZXg}RT;7~ndxiSRT.6P">
+                            <value name="TEXT">
+                              <block type="variables_get" id="+Lwey%(s#x_KSgOjsO0R">
+                                <field name="VAR" id="^2+r#,ld=L^^s8hNgH#{">i-最大次數</field>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="procedures_defnoreturn" id="#rT]d)8)z?Npl.n(;gcm" x="1413" y="12">
+    <field name="NAME">初始</field>
+    <comment pinned="false" h="80" w="160">描述此函式...</comment>
+    <statement name="STACK">
+      <block type="variables_set" id="8UQESP%7|u}Hm~es16@W">
+        <field name="VAR" id="6Qq0m|OITjc#nFyVOIhU">清單-字母</field>
+        <value name="VALUE">
+          <block type="lists_create_with" id="ey25l:F1qaYDx`O*Gpds">
+            <mutation items="0"></mutation>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set" id="ysPMM+^-8xJ7S]n7+Jm;">
+            <field name="VAR" id="wx%iWd@ni9]]jBq#g1or">清單-次數</field>
+            <value name="VALUE">
+              <block type="lists_create_with" id=".OxW^Q{b=KzsW33jDmHk">
+                <mutation items="0"></mutation>
+              </block>
+            </value>
+            <next>
+              <block type="variables_set" id="4)rEmQ!t?7s=2~W=ULw_">
+                <field name="VAR" id="q=::k7(K1`PMH*}WJM?+">清單-亂碼</field>
+                <value name="VALUE">
+                  <block type="lists_create_with" id="]o|BdTLbO_k%30@lgA#=">
+                    <mutation items="0"></mutation>
+                  </block>
+                </value>
+                <next>
+                  <block type="variables_set" id="Tb[.i,;b!4H#kWIm3mHH">
+                    <field name="VAR" id=",2~Igt;7LFoooINh;Dzl">亂碼</field>
+                    <value name="VALUE">
+                      <block type="text" id="I(:bzpELR{v:e.%Q5cXw">
+                        <field name="TEXT"></field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="sensing_askandwait" id="CM62#Ocp%s8z@8olP5}n">
+                        <value name="TEXT">
+                          <block type="text" id="l1^EA%_^H^FRq~x=adZ1">
+                            <field name="TEXT"></field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="variables_set" id="`u9Dy~3;;8{iEk44[^0.">
+                            <field name="VAR" id=",2~Igt;7LFoooINh;Dzl">亂碼</field>
+                            <value name="VALUE">
+                              <block type="sensing_answer" id="Qg{l}bFzae9{CEYwMwGD"></block>
+                            </value>
+                            <next>
+                              <block type="variables_set" id="C4i`Zf^K+=25QRRL}LDS">
+                                <field name="VAR" id="5lt|ZXbhTc]HXXhJyCU[">亂碼長度</field>
+                                <value name="VALUE">
+                                  <block type="text_length1" id="--@YhCI;zTyeKklX~k?R">
+                                    <value name="VALUE">
+                                      <shadow type="text" id="4O[1(#;?bf{4To|20(aI">
+                                        <field name="TEXT">abc</field>
+                                      </shadow>
+                                      <block type="variables_get" id="=7*)|%ui0*+ybd|D)X/%">
+                                        <field name="VAR" id=",2~Igt;7LFoooINh;Dzl">亂碼</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="controls_for" id="m8(`dYW#1zoK*6m[Ubf|">
+                                    <field name="VAR" id="9nY1LY=A:}]r7+aWOE;^">n</field>
+                                    <value name="FROM">
+                                      <shadow type="math_number" id="kIb*f!rN.[p/5[:N;*9O">
+                                        <field name="NUM">1</field>
+                                      </shadow>
+                                    </value>
+                                    <value name="TO">
+                                      <shadow type="math_number" id="+7HOZUs?@(FIu9CZXM,C">
+                                        <field name="NUM">10</field>
+                                      </shadow>
+                                      <block type="text_length1" id="Lg`r~$IPb8ZK4~f7F$Kj">
+                                        <value name="VALUE">
+                                          <shadow type="text" id="3SnLJGXerj-Y;U3v.J?+">
+                                            <field name="TEXT">abc</field>
+                                          </shadow>
+                                          <block type="variables_get" id=",$Ld7^QLC3iv|fjCfdbu">
+                                            <field name="VAR" id=",2~Igt;7LFoooINh;Dzl">亂碼</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <value name="BY">
+                                      <shadow type="math_number" id="Ma(Hb+S_c_%02#$Fa.Fi">
+                                        <field name="NUM">1</field>
+                                      </shadow>
+                                    </value>
+                                    <statement name="DO">
+                                      <block type="lists_setIndex" id="2[VIigE`.OAATMMmzJ$7">
+                                        <mutation at="false"></mutation>
+                                        <field name="MODE">INSERT</field>
+                                        <field name="WHERE">LAST</field>
+                                        <value name="LIST">
+                                          <block type="variables_get" id="{zw5LZ4?Xe/Bw1sfu-7w">
+                                            <field name="VAR" id="q=::k7(K1`PMH*}WJM?+">清單-亂碼</field>
+                                          </block>
+                                        </value>
+                                        <value name="TO">
+                                          <block type="text_charAt" id="mT5`T+$p[?U)P[)zd^.C">
+                                            <mutation at="true"></mutation>
+                                            <field name="WHERE">FROM_START</field>
+                                            <value name="VALUE">
+                                              <shadow type="text" id="CYx)]pa[sFD,*k5lH$(@">
+                                                <field name="TEXT">abc</field>
+                                              </shadow>
+                                              <block type="variables_get" id="yVLE~9pN}WG|vl_c4BEJ">
+                                                <field name="VAR" id=",2~Igt;7LFoooINh;Dzl">亂碼</field>
+                                              </block>
+                                            </value>
+                                            <value name="AT">
+                                              <block type="variables_get" id="R37IP%^JOa-~HXRQO,sE">
+                                                <field name="VAR" id="9nY1LY=A:}]r7+aWOE;^">n</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </statement>
+                                    <next>
+                                      <block type="variables_set" id="We;6y$dAN,A/=r%rE[,.">
+                                        <field name="VAR" id="W8T^G+7-;B:MMWP3%sF2">i-幾次</field>
+                                        <value name="VALUE">
+                                          <block type="math_number" id="_Z$kB%Btpu}{Qcn9K,J;">
+                                            <field name="NUM">0</field>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="variables_set" id="`3(%RA!JGmSWOl+~rA3@">
+                                            <field name="VAR" id="5Z,/d!hpuVBom%f2~xJ$">i-亂碼字母</field>
+                                            <value name="VALUE">
+                                              <block type="text" id="jVDUT7!}^pwmq#}k}$}n">
+                                                <field name="TEXT"></field>
+                                              </block>
+                                            </value>
+                                            <next>
+                                              <block type="variables_set" id="Oe::oV%;v(ja9FuNIh;P">
+                                                <field name="VAR" id="^2+r#,ld=L^^s8hNgH#{">i-最大次數</field>
+                                                <value name="VALUE">
+                                                  <block type="math_number" id="B3PT^P6d]V7N6_Cp$G?z">
+                                                    <field name="NUM">0</field>
+                                                  </block>
+                                                </value>
+                                                <next>
+                                                  <block type="variables_set" id="-hxkE_ZK`ft2A/V#ex3+">
+                                                    <field name="VAR" id="xBv1oIm=BABc!XD/k}/U">i-最大字母</field>
+                                                    <value name="VALUE">
+                                                      <block type="text" id="YdBOm4m3+dem^eB~geDb">
+                                                        <field name="TEXT"></field>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="controls_repeat_ext" id="5PtN4El.C[9R0`ZulYN," disabled="true" x="-362" y="363">
+    <value name="TIMES">
+      <shadow type="math_number" id="h/nZZ/~/@0ux(}M!?L:N">
+        <field name="NUM">10</field>
+      </shadow>
+    </value>
+    <statement name="DO">
+      <block type="controls_repeat_ext" id="8zpu?0A;O`0zztMvTXjw">
+        <value name="TIMES">
+          <shadow type="math_number" id="!=_)^2-ITe2{|K2Ss7e$">
+            <field name="NUM">10</field>
+          </shadow>
+          <block type="lists_length" id="I*rMvp7os=QF~*mkog3(">
+            <value name="VALUE">
+              <block type="variables_get" id="jVxE)8raI(`luLf+2wOE">
+                <field name="VAR" id="6Qq0m|OITjc#nFyVOIhU">清單-字母</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="looks_say" id="_/Z9}qf$2m|]c|R_oF[Y">
+            <value name="TEXT">
+              <block type="variables_get" id="b`v#vj1B]q|EIr/`Ph8w">
+                <field name="VAR" id="6Qq0m|OITjc#nFyVOIhU">清單-字母</field>
+              </block>
+            </value>
+            <next>
+              <block type="looks_say" id="zZU!t*^ttkK7~EF|}.9p">
+                <value name="TEXT">
+                  <block type="variables_get" id="j{]#S6q.fXRr1=rs6*u7">
+                    <field name="VAR" id="wx%iWd@ni9]]jBq#g1or">清單-次數</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="looks_say" id="V?oQ!u+~K9F{+$Y]`2wy">
+                    <value name="TEXT">
+                      <block type="variables_get" id="!iY{4aOBd8FD;iBbKQ*s">
+                        <field name="VAR" id="6Qq0m|OITjc#nFyVOIhU">清單-字母</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="looks_say" id="/(DcX;=nF#Y4X!s^][gO">
+                        <value name="TEXT">
+                          <block type="variables_get" id="xCYEyO}9_a{zIv^dEIvr">
+                            <field name="VAR" id="wx%iWd@ni9]]jBq#g1or">清單-次數</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="looks_say" id="C_2zW_IUI89[YJ3y}a4_">
+                            <value name="TEXT">
+                              <block type="variables_get" id="2`DjqM`{eS}Ga,p%rA)J">
+                                <field name="VAR" id="xBv1oIm=BABc!XD/k}/U">i-最大字母</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="looks_say" id="m=6vy^?NGFqlVD1Y%0~T">
+                                <value name="TEXT">
+                                  <block type="variables_get" id="w-{BM#z+CnSV@OY]:!dO">
+                                    <field name="VAR" id="^2+r#,ld=L^^s8hNgH#{">i-最大次數</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="looks_say" id="pP2L5:Fr)G`^Y*4NbX%u">
+                                    <value name="TEXT">
+                                      <block type="lists_getIndex" id="HV{/XkH%JB_bYbs[__Lw">
+                                        <mutation statement="false" at="true"></mutation>
+                                        <field name="MODE">GET</field>
+                                        <field name="WHERE">FROM_START</field>
+                                        <value name="VALUE">
+                                          <block type="variables_get" id="R+D,7kg:KTqqhgR[(q(*">
+                                            <field name="VAR" id="wx%iWd@ni9]]jBq#g1or">清單-次數</field>
+                                          </block>
+                                        </value>
+                                        <value name="AT">
+                                          <block type="math_arithmetic" id="o~u@yHyh,+_KazxNDcfx">
+                                            <field name="OP">ADD</field>
+                                            <value name="A">
+                                              <shadow type="math_number">
+                                                <field name="NUM">1</field>
+                                              </shadow>
+                                              <block type="variables_get" id="8dtKj6./53gqLSi%Ou7?">
+                                                <field name="VAR" id="{s4:n^wj0|FeRn4UGtso">o</field>
+                                              </block>
+                                            </value>
+                                            <value name="B">
+                                              <shadow type="math_number" id="~xY?p(Y/[7aRjnz5e8)p">
+                                                <field name="NUM">1</field>
+                                              </shadow>
+                                            </value>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="looks_say" id="B+;{lE~~$+Oe)?=mLN^!">
+                                        <value name="TEXT">
+                                          <block type="lists_getIndex" id="B,bHFhUNRQH+;|krv-4D">
+                                            <mutation statement="false" at="true"></mutation>
+                                            <field name="MODE">GET</field>
+                                            <field name="WHERE">FROM_START</field>
+                                            <value name="VALUE">
+                                              <block type="variables_get" id="dgN(mDtC!n/LMwymw:lt">
+                                                <field name="VAR" id="wx%iWd@ni9]]jBq#g1or">清單-次數</field>
+                                              </block>
+                                            </value>
+                                            <value name="AT">
+                                              <block type="variables_get" id="5A6C*ZBl7uPm8Y@uL9{~">
+                                                <field name="VAR" id="{s4:n^wj0|FeRn4UGtso">o</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="looks_say" id="Anr),i0{{4!o$qW_*sd_">
+                                            <value name="TEXT">
+                                              <block type="variables_get" id="M[jf9VgWsN)!3iNCmHB_">
+                                                <field name="VAR" id="xBv1oIm=BABc!XD/k}/U">i-最大字母</field>
+                                              </block>
+                                            </value>
+                                            <next>
+                                              <block type="looks_say" id="u_;Lx$kya_kx4sx8?X}2">
+                                                <value name="TEXT">
+                                                  <block type="variables_get" id="%tFzQ7e#Y/!(yt@#.PI{">
+                                                    <field name="VAR" id="6Qq0m|OITjc#nFyVOIhU">清單-字母</field>
+                                                  </block>
+                                                </value>
+                                                <next>
+                                                  <block type="looks_say" id="KS#Z@]a|Rr4HJoic1h9B">
+                                                    <value name="TEXT">
+                                                      <block type="variables_get" id=";V:}8{xphs)QnzpZ3?+N">
+                                                        <field name="VAR" id="wx%iWd@ni9]]jBq#g1or">清單-次數</field>
+                                                      </block>
+                                                    </value>
+                                                    <next>
+                                                      <block type="looks_say" id="!dXNg(kr#G2JZ{uXqZ.Q">
+                                                        <value name="TEXT">
+                                                          <block type="variables_get" id="ko{6SN@6zp^xuz*7;qN3">
+                                                            <field name="VAR" id="^2+r#,ld=L^^s8hNgH#{">i-最大次數</field>
+                                                          </block>
+                                                        </value>
+                                                        <next>
+                                                          <block type="looks_say" id="!R)0u`C^HYcJmO)vl.l4">
+                                                            <value name="TEXT">
+                                                              <block type="variables_get" id="/?{T;_1?*KQ{mF]5GBhx">
+                                                                <field name="VAR" id="xBv1oIm=BABc!XD/k}/U">i-最大字母</field>
+                                                              </block>
+                                                            </value>
+                                                            <next>
+                                                              <block type="looks_say" id="$IJ+(${Vk/r*xtU=)t#f">
+                                                                <value name="TEXT">
+                                                                  <block type="variables_get" id="[dYXEUu)#-I%+AHFqBrk">
+                                                                    <field name="VAR" id="^2+r#,ld=L^^s8hNgH#{">i-最大次數</field>
+                                                                  </block>
+                                                                </value>
+                                                                <next>
+                                                                  <block type="looks_say" id="FR)RNc!p5A!wB6)o0gzU">
+                                                                    <value name="TEXT">
+                                                                      <block type="variables_get" id="_jTqwOWE-:[lk)E{f2Sb">
+                                                                        <field name="VAR" id="^2+r#,ld=L^^s8hNgH#{">i-最大次數</field>
+                                                                      </block>
+                                                                    </value>
+                                                                    <next>
+                                                                      <block type="looks_say" id="BxaO)zId+//$j$[.@ZQC">
+                                                                        <value name="TEXT">
+                                                                          <block type="text" id="Rm*Fn.irVU%y+lmuDPdj">
+                                                                            <field name="TEXT">#</field>
+                                                                          </block>
+                                                                        </value>
+                                                                      </block>
+                                                                    </next>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </next>
+                                                          </block>
+                                                        </next>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="lists_getIndex" id="Gq?H9:rn.Ed.DSSI@;Uk" disabled="true" x="588" y="902">
+    <mutation statement="false" at="true"></mutation>
+    <field name="MODE">GET</field>
+    <field name="WHERE">FROM_START</field>
+    <value name="VALUE">
+      <block type="variables_get" id="XL)QFfdXbj9F;ai|?wDr">
+        <field name="VAR" id="wx%iWd@ni9]]jBq#g1or">清單-次數</field>
+      </block>
+    </value>
+    <value name="AT">
+      <block type="variables_get" id="h]iAB1!h[[$1W~=[Z-uh">
+        <field name="VAR" id="{s4:n^wj0|FeRn4UGtso">o</field>
+      </block>
+    </value>
+  </block>
+  <block type="lists_getIndex" id="oQ3aOT4s=#umVjm=rU:}" disabled="true" x="657" y="910">
+    <mutation statement="false" at="true"></mutation>
+    <field name="MODE">GET</field>
+    <field name="WHERE">FROM_START</field>
+    <value name="VALUE">
+      <block type="variables_get" id="xi(t@HvgmrcA2$-1hgk_">
+        <field name="VAR" id="wx%iWd@ni9]]jBq#g1or">清單-次數</field>
+      </block>
+    </value>
+    <value name="AT">
+      <block type="math_arithmetic" id="R+ug9,Fl*Y$!fER0cbS*">
+        <field name="OP">ADD</field>
+        <value name="A">
+          <shadow type="math_number">
+            <field name="NUM">1</field>
+          </shadow>
+          <block type="variables_get" id="_Ijia(LTK)^ByAdEf|/(">
+            <field name="VAR" id="{s4:n^wj0|FeRn4UGtso">o</field>
+          </block>
+        </value>
+        <value name="B">
+          <shadow type="math_number" id="93UeO?j)6}4``Mt?Tl~P">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+      </block>
+    </value>
+  </block>
+</xml>
